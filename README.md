@@ -48,7 +48,7 @@
 
         git clone git@github.com:us-learn-and-devops/2021_05_26.git
 
-9. You'll find two files there: `webapp-deployment.yaml` and `webapp-service.yaml`. Use the latter to create a load-balancer `service` object in your k8s cluster first:
+9. You'll find two files there: `webapp-deployment.yaml` and `webapp-svc.yaml`. Use the latter to create a load-balancer `service` object in your k8s cluster first:
 
         kubectl apply -f ./webapp-svc.yaml
 
