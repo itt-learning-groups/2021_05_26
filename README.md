@@ -50,12 +50,12 @@
 
 9. You'll find two files there: `webapp-deployment.yaml` and `webapp-service.yaml`. Use the latter to create a load-balancer `service` object in your k8s cluster first:
 
-        kubectl apply -f ./webapp-deployment.yaml
+        kubectl apply -f ./webapp-svc.yaml
 
 10. Check your AWS web console for the new load balancer, and check kubectl to find the new `service` object.
 11. Create the deployment:
 
-        kubectl apply -f ./webapp-service.yaml
+        kubectl apply -f ./webapp-deployment.yaml
 
 12. Use kubectl to check to make sure the deployment has been created. Try describing the deployment using kubectl. Use kubectl to list your pods in the default namespace and make sure you see the pods from the deployment. Finally, copy the load-balancer URL from either the EC2 web console or from the description of your `service` object in kubectl, and use a browser or `curl` to send a request to the web server running in your k8s deployment.
 13. Make sure you can explain to yourself the path taken by the network request from your laptop to one of the 3 webapp pods running in your cluster.
